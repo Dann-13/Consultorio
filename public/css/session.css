@@ -1,0 +1,85 @@
+.container {
+	width: 94%;
+	margin: 0 auto;
+    font-family: 'Abel', sans-serif;
+}
+
+
+.seccion-agendamiento .contenedor-Principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: space-between;
+}
+
+.formulario .container{
+    display: flex;
+    align-items: center;
+}
+
+.elemento{
+    font-size: 20px;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.imgcitas{
+    width: 50%;
+    margin: 0;
+}
+.logocitas{
+    width: 100%;
+}
+.boton{
+    background-color: #fff;
+    color: #0D3878;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    font-size: 22px;
+}
+.boton:hover{
+    background-color: #0D3878;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    font-size: 22px;
+}
+.elemento1{
+    font-size: 25px;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+    color: #0D3878;
+    font-weight: 800;
+}
+div {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+input[type="number"] {
+    width: 100px;
+}
+
+input+span {
+    padding-right: 30px;
+}
+
+input:invalid+span::after {
+    position: absolute;
+    content: "✖";
+    padding-left: 5px;
+}
+
+input:valid+span::after {
+    position: absolute;
+    content: "✓";
+    padding-left: 5px;
+}
+.boton{
+    padding: 10px;
+    font-family: 'Abel', sans-serif;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="contenedor">
+
+        <div id="contenedorcentrado">
+            <div id="login">
+                <form action="/auth" method="POST" id="loginform">
+                    <label for="usuario" class="style">Email</label>
+                    <input id="usuario" type="email" name="email" placeholder="Email" required>
+
+                    <label for="password" class="style">Identificación</label>
+                    <input id="password" type="password" placeholder="Contraseña" name="password" required>
+
+                    <button type="submit" title="Ingresar" name="Ingresar" >Login</button>
+                    <a href="/registro" class="button-registro">Registro</a>
+                </form>
+
+            </div>
+            <div id="derecho">
+                <div class="titulo">
+                    <h3>Bienvenido</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Mensaje de Regstro extoso-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Para poder usar el alert en la platilla de ejs-->
+    <% if (typeof alert !="undefined" ) { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon%>',
+                showConfirmButton:<%= showConfirmButton %>,
+                timer: <%= timer %>
+                }).then(() => {
+                    window.location = 'session<%= ruta %>'
+                })
+        </script>
+        <% } %>
+</body>
+
+</html>

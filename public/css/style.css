@@ -1,0 +1,53 @@
+a{
+    text-decoration: none;
+}
+#contenedor-inicial{
+    background-color: #0D3878;
+}
+
+#contenedor-formulario{
+    display: flex;
+    align-items: center;
+  }
+
+.logo{
+    height: 150px;
+}
+#typewriter{
+    font-family: 'Abel', sans-serif;
+}
+.card {
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 1s;
+    font-family: 'Abel', sans-serif;
+
+}
+#navbarSupportedContent{
+    letter-spacing: 0;
+    font-family: 'Abel', sans-serif;
+    font-size: 25px;
+}
+#ubicacion{
+    font-size: 25px;
+}
+.iframe{
+    max-width: 100%;
+    height: auto;
+}
+
+footer{
+    background-color:#0D3878 ;
+    min-height: 100px;
+}
+footer p {
+    color: #f7f7f7;
+    text-align: center;
+    color: #f7f7f7;
+
+}
+#iconos i{
+    font-size:26px;
+    padding: 0 8px;
+    text-align: center;
+}

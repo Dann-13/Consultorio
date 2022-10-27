@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Health Life</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--Alguno iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
+
+
+</head>
+
+<body>
+    <header class="container-fluid d-flex justify-content-center" id="contenedor-inicial">
+        <p class="text-light mb-0 p-2 fs-6" id="typewriter"></p>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-light " id="menu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="text-primary fs-4 fw-bold"><img src="/resources/css/img/logo.png" class="logo" alt=""></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/registro">Agendar Cita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#seccion-final">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2500">
+                <img src="/resources/css/img/1.jpg" class="d-block w-100" alt="carrusel1">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="/resources/css/img/2.jpg" class="d-block w-100" alt="carrusel2">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="/resources/css/img/3.jpg" class="d-block w-100" alt="carrusel3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container-lg-12 " style=" background-color:  #DDE3F3;padding-top: 50px; padding-bottom: 50px;">
+
+        <div class="container" id="Registrate">
+            <a href="/registro">
+                <div class="">
+                    <div class="card">
+                        <div class="card-body text-center ">
+                            <i class="fas fa-address-book" border-radius="25px"
+                                style='font-size:75px; color:#003785; padding:  5px'></i>
+                            <i class=" " style='font-size:75px; color:#003785; padding:5px'></i>
+                            <h3>¡Registrate y agenda tu cita!</h3>
+                            <p>Si deseas agendar una cita médica registra tus datos.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="container-lg-12 " style=" background-color:  #DDE3F3;padding-top: 50px; padding-bottom: 50px;">
+
+            <div class="container" id="Login">
+                <a href="/login">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body text-center ">
+                                <i class="fas fa-user" border-radius="25px"
+                                    style='font-size:75px; color:#003785; padding:  5px'></i>
+                                <i class=" " style='font-size:75px; color:#003785; padding:5px'></i>
+                                <h3>¡Si ya tienes una cuenta inicia sesión!</h3>
+                                <p>Correo electrónico y número de identificación</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center pt-5">
+            <p class="text-center" id="ubicacion">Nuestra ubicación</p>
+            <div class="iframe">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15906.552713194533!2d-74.11382835735317!3d4.658442546598729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1665109111029!5m2!1ses!2sco"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </div>
+  <br>
+  <br>
+    <section id="seccion-final" class="border-bottom border-secondary border-2">
+        <!--Formulario-->
+        <div class="container" id="contenedor-formulario">
+            <div class="text-center mb-4" id="titulo-formulario">
+                <div><img class="img-fluid w-25" src="/resources/css/img/user.png" alt="contacto" id="img-form"></div>
+                <h2>Contacto</h2>
+                <p class="fs-5">Más Información</p>
+            </div>
+            <form action="" class="w-50">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="tel" placeholder="300-000-00-00" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Escriba su mensaje"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary w-100 fs-5" type="button">Enviar</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="w-100 d-flex align-items justify-content-center flex-wrap">
+        <div id="iconos">
+            <p class="fs-5 px-3 pt-3">Hecho por: Grupo 5 - Misión TIC 2022 - 3ra. Cohorte</p>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+    </footer>
+
+
+    <!--Cdn de las palabras-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="/resources/js/indexjs.js"></script>
+
+
+
+</body>
+
+</html>
