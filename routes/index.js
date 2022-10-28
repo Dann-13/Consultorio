@@ -29,6 +29,9 @@ router.get('/cita', (req, res) => {
 router.get('/registro', (req, res) => {
     res.render('registro');
 });
+router.get('/consulta',(req, res)=>{
+    res.render('consulta');
+})
 //Registro POST
 router.post('/registro', (req, res, next) => {
     //capturamos los tres campos
@@ -162,6 +165,24 @@ router.post('/session', urlcodeParser, (req, res, next) => {
         }
     });
 });
+router.post('/consulta', urlcodeParser, function (req, res){
+    const idbusqueda = req.body.idbusqueda;
+    console.log(idbusqueda)
+    //Me enseñara el ultimo registro de un determinado usuario
+    connection.query('SELECT * FROM citas WHERE numero_identificacion = ? ORDER BY id DESC LIMIT 1', [idbusqueda], async (err, result, rowst) =>{
+        if(err){
+            console.log(err)
+        }else{
+            console.log(result);
+            res.render('mostrar', {
+                idcita: result[0].id,
+                numIden: result[0].numero_identificacion,
+                hora: result[0].hora,
+                fecha: result[0].fecha,
+            })
+        }
+    });
+})
 //mostrar registros
 router.post('/mostrar', urlcodeParser, function (req, res) {
     req.getConnection((err, conn) => {
@@ -175,29 +196,6 @@ router.post('/mostrar', urlcodeParser, function (req, res) {
                 res.status(200).send({ result })
                 idMedico = result[0].id;
                 console.log(idMedico)
-            }
-        })
-    })
-});
-//verificar usuario
-router.post('/show', urlcodeParser, function (req, res) {
-    const Identificacion = req.body.Identificacion;
-    const email = req.body.email;
-    req.getConnection((err, conn) => {
-        if (err) return res.send(err)
-        const x = ""
-        const consulta = x.concat('select * from pacientes where id="', Identificacion, '"and email="', email, '"')
-        console.log(consulta)
-        conn.query(consulta, [req.body], (err, result, rows) => {
-            if (err) {
-                { res.send(err) }
-            } else {
-                if (result.length > 0) {
-                    res.status(200).send({ existe: 1, Identificacion: result[0].Identificacion })
-                    console.log(result[0].Identificacion)
-                } else {
-                    res.status(200).send({ existe: 0 })
-                }
             }
         })
     })
